@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>kadetBroker</artifactId>
+        <groupId>com.kadet.broker</groupId>
+        <version>1.0</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>dag.mavenear2</groupId>
+    <artifactId>ear</artifactId>
+    <packaging>ear</packaging>
+
+    <dependencies>
+
+        <dependency>
+            <groupId>com.kadet.broker</groupId>
+            <artifactId>ejb</artifactId>
+            <version>1.0</version>
+            <type>ejb</type>
+        </dependency>
+
+        <dependency>
+            <groupId>com.kadet.broker</groupId>
+            <artifactId>web</artifactId>
+            <version>1.0</version>
+            <type>war</type>
+        </dependency>
+
+        <dependency>
+            <groupId>com.kadet.broker</groupId>
+            <artifactId>common</artifactId>
+            <version>1.0</version>
+            <type>jar</type>
+        </dependency>
+
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+
+                <artifactId>maven-ear-plugin</artifactId>
+                <version>2.5</version>
+
+                <configuration>
+                    <modules>
+
+                        <webModule>
+                            <groupId>com.kadet.broker</groupId>
+                            <artifactId>web</artifactId>
+                        </webModule>
+
+                        <ejbModule>
+                            <groupId>com.kadet.broker</groupId>
+                            <artifactId>ejb</artifactId>
+                        </ejbModule>
+
+                        <jarModule>
+                            <groupId>com.kadet.broker</groupId>
+                            <artifactId>common</artifactId>
+                        </jarModule>
+
+                    </modules>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+
+</project>
