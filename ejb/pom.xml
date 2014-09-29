@@ -13,13 +13,25 @@
     <packaging>ejb</packaging>
 
     <dependencies>
-        
+
+        <!-- Kadet Broker -->
+
         <dependency>
             <groupId>com.kadet.broker</groupId>
             <artifactId>common</artifactId>
             <version>1.0</version>
             <scope>provided</scope>
         </dependency>
+
+
+        <!-- Groovy (hopes...) -->
+
+        <!--<dependency>
+            <groupId>org.codehaus.gmaven.runtime</groupId>
+            <artifactId>gmaven-runtime-1.8</artifactId>
+            <version>1.4</version>
+        </dependency>-->
+
     </dependencies>
     
     <build>
@@ -48,6 +60,26 @@
                     <target>1.7</target>
                 </configuration>
             </plugin>
+<!--
+            <plugin>
+                <groupId>org.codehaus.gmaven</groupId>
+                <artifactId>gmaven-plugin</artifactId>
+                <version>1.4</version>
+                <configuration>
+                    <providerSelection>1.8</providerSelection>
+                    <source/>
+                </configuration>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>generateStubs</goal>
+                            <goal>compile</goal>
+                            <goal>generateTestStubs</goal>
+                            <goal>testCompile</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>-->
 
         </plugins>
     </build>
