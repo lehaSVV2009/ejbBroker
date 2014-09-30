@@ -9,7 +9,7 @@
     </module>
     <module>
         <web>
-            <web-uri>web.war</web-uri>
+            <web-uri>web-1.0.war</web-uri>
             <context-root>/web</context-root>
         </web>
     </module>
